@@ -8,7 +8,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     //Context : Db tabloları ile proje classlarını bağlamak 
     //Dbsete bağladığımız tablolar bizim classımıza denk gelmesi gerekiyor.
-    class NorthwindContext:DbContext
+   public class NorthwindContext:DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -17,6 +17,6 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
-
+        public DbSet<Order> Orders { get; set; }
     }
 }
