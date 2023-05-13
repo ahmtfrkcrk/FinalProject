@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Business.Constants
 {
+    //static classı newlemeyi ortadan kaldırıyor
+    //public oluşturulan değişkenler PascalCase yazılır yani ilk harfi büyük başlar
     public static class Messages
     {
         public static string ProductAdded = "Ürün eklendi";

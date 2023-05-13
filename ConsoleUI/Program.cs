@@ -32,7 +32,6 @@ namespace ConsoleUI
         private static void ProductTest()
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
-
             var result = productManager.GetProductDetails();
 
             if (result.Success)
@@ -46,7 +45,7 @@ namespace ConsoleUI
             {
                 Console.WriteLine(result.Message);
             }
-            
+
 
         }
     }
