@@ -49,7 +49,6 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpPost("add")]
-        [Authorize(Roles ="Product.List")]
         public IActionResult Add(Product product)
         {
             var result = _productService.Add(product);
