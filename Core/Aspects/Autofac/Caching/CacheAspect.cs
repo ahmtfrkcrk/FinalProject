@@ -26,7 +26,7 @@ namespace Core.Aspects.Autofac.Caching
             var methodName = string.Format($"{invocation.Method.ReflectedType.FullName}.{invocation.Method.Name}");
             var arguments = invocation.Arguments.ToList();
             var key = $"{methodName}({string.Join(",", arguments.Select(x => x?.ToString() ?? "<Null>"))})";
-            //?? varsa sol kısmı yoksa sağ kısmı ekle demek. x? null olabilir string e çevir.
+            //?? varsa sol kısmı yoksa sağ kısmı ekle demek. x?(data) null olabilir string e çevir.
             if (_cacheManager.IsAdd(key))
             {
                 invocation.ReturnValue = _cacheManager.Get(key);

@@ -10,6 +10,7 @@ namespace Business.Constants
     public static class Messages
     {
         public static string ProductAdded = "Ürün eklendi";
+        public static string ProductUpdated = "Ürün başarıyla güncellendi.";
         public static string ProductNameInvalid = "Ürün ismi geçersiz";
         public static string MaintenanceTime = "Bakım arası";
         public static string ProductsListed = "Ürünler listelendi";
@@ -25,5 +26,6 @@ namespace Business.Constants
         public static string UserAlreadyExists = "Böyle bir kullanıcı var.";
         public static string AccessTokenCreated = "Giriş token oluşturuldu.";
 
+        
     }
 }
