@@ -45,11 +45,7 @@ namespace WebAPI
             //services.AddSingleton<IProductDal, EfProductDal>();
 
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowOrigin", builder => builder.WithOrigins("https://localhost:44389/"));
-
-            });
+            services.AddCors();
             
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -80,7 +76,8 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder => builder.WithOrigins("https://localhost:44389/").AllowAnyHeader());
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
