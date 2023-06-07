@@ -10,6 +10,7 @@ namespace Business.Abstract
     {
         IDataResult<List<Category>> GetAll();
         IDataResult<Category> GetById(int CategoryId);
+        IResult Add(Category category);
 
     }
 }
